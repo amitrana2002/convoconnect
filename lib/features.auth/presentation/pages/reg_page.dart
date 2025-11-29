@@ -1,4 +1,3 @@
-import 'package:convoconnect/core/theme.dart';
 import 'package:convoconnect/features.auth/presentation/widgets/auth_button.dart';
 import 'package:convoconnect/features.auth/presentation/widgets/auth_input_field.dart';
 import 'package:convoconnect/features.auth/presentation/widgets/login_prompt.dart';
@@ -71,76 +70,6 @@ class _RegPageState extends State<RegPage> {
                 title: "Not registered yet",
                 subtitle: "Click here to register",
                 onTap: () {},
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _builtRegisterButton() {
-    return ElevatedButton(
-      onPressed: () {
-        _showInputValues();
-      },
-      style: ElevatedButton.styleFrom(
-        backgroundColor: DefaultColors.buttonColor,
-        padding: EdgeInsets.symmetric(vertical: 10),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      ),
-      child: Text(
-        "Register",
-        style: TextStyle(fontSize: 18, color: Colors.white),
-      ),
-    );
-  }
-
-  Widget _buildTextInput(
-    String hint,
-    IconData icon,
-    TextEditingController controller,
-    bool isPassword,
-  ) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16),
-      decoration: BoxDecoration(
-        color: DefaultColors.sentMessageInput,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Row(
-        children: [
-          Icon(icon, color: Colors.grey),
-          SizedBox(width: 10),
-          Expanded(
-            child: TextField(
-              controller: controller,
-              obscureText: isPassword,
-              decoration: InputDecoration(
-                hintText: hint,
-                hintStyle: TextStyle(color: Colors.grey),
-                border: InputBorder.none,
-              ),
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildLoginPrompt() {
-    return Center(
-      child: GestureDetector(
-        onTap: () {},
-        child: RichText(
-          text: TextSpan(
-            text: "Already have an account? ",
-            style: TextStyle(color: Colors.white),
-            children: [
-              TextSpan(
-                text: "Click here to Login",
-                style: TextStyle(color: Colors.blue),
               ),
             ],
           ),

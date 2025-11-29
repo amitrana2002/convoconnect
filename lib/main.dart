@@ -1,4 +1,3 @@
-import 'package:convoconnect/chat_page.dart';
 import 'package:convoconnect/core/theme.dart';
 import 'package:convoconnect/features.auth/data/datasources/auth_remote_data.dart';
 import 'package:convoconnect/features.auth/data/repositories/auth_repo_imple.dart';
@@ -6,10 +5,7 @@ import 'package:convoconnect/features.auth/domain/repositories/auth_repo.dart';
 import 'package:convoconnect/features.auth/domain/usecases/login_usercase.dart';
 import 'package:convoconnect/features.auth/domain/usecases/resigter_usecase.dart';
 import 'package:convoconnect/features.auth/presentation/bloc/auth_bloc.dart';
-import 'package:convoconnect/home.dart';
 import 'package:convoconnect/features.auth/presentation/pages/login_page.dart';
-import 'package:convoconnect/message_page.dart';
-import 'package:convoconnect/features.auth/presentation/pages/reg_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
