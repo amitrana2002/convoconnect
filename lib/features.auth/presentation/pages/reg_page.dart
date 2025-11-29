@@ -1,4 +1,7 @@
 import 'package:convoconnect/core/theme.dart';
+import 'package:convoconnect/features.auth/presentation/widgets/auth_button.dart';
+import 'package:convoconnect/features.auth/presentation/widgets/auth_input_field.dart';
+import 'package:convoconnect/features.auth/presentation/widgets/login_prompt.dart';
 import 'package:flutter/material.dart';
 
 class RegPage extends StatefulWidget {
@@ -40,25 +43,35 @@ class _RegPageState extends State<RegPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              _buildTextInput(
-                "Username",
-                Icons.person,
-                _usernameController,
-                false,
+              AuthInputField(
+                hint: "Username",
+                icon: Icons.person,
+                controller: _usernameController,
+                isPassword: false,
               ),
               SizedBox(height: 20),
-              _buildTextInput("Email", Icons.email, _emailController, false),
-              SizedBox(height: 20),
-              _buildTextInput(
-                "Password",
-                Icons.lock,
-                _passwordController,
-                true,
+
+              AuthInputField(
+                hint: "Email",
+                icon: Icons.email,
+                controller: _emailController,
+                isPassword: false,
               ),
               SizedBox(height: 20),
-              _builtRegisterButton(),
+              AuthInputField(
+                hint: "Password",
+                icon: Icons.lock,
+                controller: _passwordController,
+                isPassword: true,
+              ),
               SizedBox(height: 20),
-              _buildLoginPrompt(),
+              AuthButton(text: "Register", onPressed: _showInputValues),
+              SizedBox(height: 20),
+              LoginPrompt(
+                title: "Not registered yet",
+                subtitle: "Click here to register",
+                onTap: () {},
+              ),
             ],
           ),
         ),
